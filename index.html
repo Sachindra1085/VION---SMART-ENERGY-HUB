@@ -3877,5 +3877,12 @@ header .brand-logo img{height:52px !important;width:auto}
 .brandrow{margin-bottom:14px !important}
 @media (max-width:640px){header .brand-logo img{height:40px !important}.vent{height:40px !important;padding-left:10px !important}.vent img{height:auto !important;max-height:19px !important}}
 </style>
+<style>@media (max-width:640px){.loadbar button{white-space:nowrap}}</style>
+<script>
+// Short "PDF" label on the bottom bar for phones; full "PDF report" on wider screens
+(function(){var b=document.getElementById('lbPdf');if(!b||!window.matchMedia)return;var full=b.innerHTML,mq=matchMedia('(max-width:640px)');
+function s(){b.innerHTML=mq.matches?'&#128196; PDF':full;b.setAttribute('aria-label','PDF report');}
+s();if(mq.addEventListener)mq.addEventListener('change',s);else mq.addListener(s);})();
+</script>
 </body>
 </html>
